@@ -1,4 +1,5 @@
-﻿using Mango.Web.CouponAPI.Models;
+﻿
+using Mango.Web.Models;
 using Mongo.Web.Models;
 using Mongo.Web.Service.IService;
 using Newtonsoft.Json;
