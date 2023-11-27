@@ -63,8 +63,8 @@ namespace Mongo.Web.Service
 						return new() { IsSuccess = false, Message = "Internal Server Error" };
 					default:
 						var apiContent = await apiResponse.Content.ReadAsStringAsync();
-						var apiResposeDto = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
-						return apiResposeDto;
+						var apiResponseDto = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
+						return apiResponseDto;
 				}
 			}
 			catch (Exception ex)
