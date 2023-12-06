@@ -1,6 +1,8 @@
 ﻿using Mango.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Mongo.Web.Service.IService;
+using Mongo.Web.Utility;
 
 namespace Mongo.Web.Controllers
 {
@@ -23,6 +25,12 @@ namespace Mongo.Web.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            var roleList = new List<SelectListItem>()
+            {
+                new SelectListItem{Text=SD.RoleAdmin, Value=SD.RoleAdmin},
+                new SelectListItem{Text=SD.RoleCustomer, Value=SD.RoleCustomer}
+            };
+            ViewBag.RoleList = roleList;
             return View();
         }
 
