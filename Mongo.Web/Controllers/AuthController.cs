@@ -44,7 +44,7 @@ namespace Mongo.Web.Controllers
             }
             else
             {
-                ModelState.AddModelError("CustomError", responseDto.Message);
+                TempData["error"] = responseDto.Message;
                 return View(obj);
             }
 
@@ -80,6 +80,10 @@ namespace Mongo.Web.Controllers
                     TempData["success"] = "Registeration Successful";
                     return RedirectToAction(nameof(Login));
                 }
+            }
+            else
+            {
+                TempData["error"] = result.Message;
             }
 
             var roleList = new List<SelectListItem>()
