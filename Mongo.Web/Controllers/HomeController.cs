@@ -33,7 +33,7 @@ namespace Mongo.Web.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> Details(int productId)
+        public async Task<IActionResult> ProductDetails(int productId)
         {
             ProductDto? model = new();
             ResponseDto? response = await _productService.GetProductByIdAsync(productId);
