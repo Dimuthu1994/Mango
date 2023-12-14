@@ -103,7 +103,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
             return _response;
         }
 
-        [HttpPost("Cartupsert")]
+        [HttpPost("CartUpsert")]
         public async Task<ResponseDto> CartUpsert(CartDto cartDto)
         {
             /*
@@ -144,7 +144,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                     if (cartDetailsFromDb == null)
                     {
                         //create cartDetails
-                        cartDto.CartDetails.First().CartHeaderId = cartDetailsFromDb.CartHeaderId;
+                        cartDto.CartDetails.First().CartHeaderId = cartHeaderFromDb.CartHeaderId;
                         _db.CartDetails.Add(_mapper.Map<CartDetails>(cartDto.CartDetails.First()));
                         await _db.SaveChangesAsync();
                     }
