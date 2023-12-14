@@ -27,7 +27,7 @@ namespace Mongo.Web.Service
             return await _baseService.SendAsync(new Models.RequestDto()
             {
                 ApiType = SD.ApiType.POST,
-                Url = SD.ShoppingCartAPIBase + "/api/coupon/GetCart/" + userId
+                Url = SD.ShoppingCartAPIBase + "/api/cart/GetCart/" + userId
             });
         }
 

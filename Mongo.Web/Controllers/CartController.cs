@@ -7,11 +7,11 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace Mongo.Web.Controllers
 {
-    public class CartController1 : Controller
+    public class CartController : Controller
     {
         private readonly ICartService _cartService;
 
-        public CartController1(ICartService cartService)
+        public CartController(ICartService cartService)
         {
             _cartService = cartService;
         }
