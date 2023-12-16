@@ -85,7 +85,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
         }
 
 
-        [HttpPost("RemoveCoupon")]
+        /*[HttpPost("RemoveCoupon")]
         public async Task<object> RemoveCoupon([FromBody] CartDto cartDto)
         {
             try
@@ -102,7 +102,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                 _response.Message = ex.Message.ToString();
             }
             return _response;
-        }
+        }*/
 
         [HttpPost("CartUpsert")]
         public async Task<ResponseDto> CartUpsert(CartDto cartDto)

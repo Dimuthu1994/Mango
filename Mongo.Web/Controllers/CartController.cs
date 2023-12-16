@@ -36,6 +36,7 @@ namespace Mongo.Web.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> ApplyCoupon(CartDto cartDto)
         {
 
@@ -49,6 +50,7 @@ namespace Mongo.Web.Controllers
 
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> RemoveCoupon(CartDto cartDto)
         {
